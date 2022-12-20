@@ -15,11 +15,15 @@
         </div>
       </div>
     </section>
+    <brand-benefits></brand-benefits>
   </main>
 </template>
 
 <script>
-export default {};
+import BrandBenefits from "./components/Brand-benefits";
+export default {
+  components: { BrandBenefits },
+};
 </script>
 
 <style lang="scss" scoped>
