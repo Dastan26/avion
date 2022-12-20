@@ -1,10 +1,31 @@
 <template>
   <div id="app">
-    <nav></nav>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400&f[]=clash-display@400&display=swap"
+      rel="stylesheet"
+    />
+    <header-component></header-component>
+    <main-page></main-page>
   </div>
 </template>
 
+<script>
+import HeaderComponent from "./modules/header/Header-component";
+import MainPage from "./modules/main/Main-page";
+
+export default {
+  components: {
+    HeaderComponent,
+    MainPage,
+  },
+  data: function () {
+    return {};
+  },
+};
+</script>
+
 <style lang="scss">
+@import "../src/assets/scss/global.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

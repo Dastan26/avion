@@ -1,0 +1,32 @@
+.header {
+  .nav {
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+
+      &__item {
+        cursor: pointer;
+      }
+
+      .user-block {
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+  .header-line {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 97%;
+    margin: 0 auto;
+  }
+  .header-items {
+    margin-top: 20px;
+    color: #726e8d;
+    font-family: "Satoshi" sans-serif;
+    font-size: 16px;
+
+    .header-item {
+      cursor: pointer;
+    }
+  }
+}

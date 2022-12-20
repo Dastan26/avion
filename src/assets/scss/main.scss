@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.hero {
+  background-image: url(/src/assets/images/HeroBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  margin-top: 20px;
+
+  &-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-collection__text {
+    margin: 48px 56px;
+    text-align: left;
+    p {
+      color: #5b5676;
+      margin-top: 20px;
+    }
+  }
+
+  .hero-collection {
+    background-color: #fff;
+    margin-top: 130px;
+    max-width: 630px;
+    align-items: flex-start;
+
+    &__btn {
+      margin-top: 157px;
+    }
+
+    &__btn:hover {
+      background-color: #eee9f7;
+      transition: 0.3s linear;
+    }
+  }
+}
