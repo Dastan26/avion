@@ -34,3 +34,8 @@ button {
   cursor: pointer;
   border: none;
 }
+
+button:hover {
+  background-color: #eee9f7;
+  transition: 0.3s linear;
+}

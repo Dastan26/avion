@@ -1,0 +1,31 @@
+.hero {
+  &-wrapper {
+    display: flex;
+    color: #fff;
+    margin: 64px;
+    justify-content: space-between;
+  }
+
+  &-block {
+    background-color: #2a254b;
+    text-align: left;
+    padding: 64px;
+
+    &__title {
+      color: #fff;
+    }
+    &__text {
+      margin-top: 12px;
+      max-width: 495px;
+    }
+    &__btn {
+      margin-top: 205px;
+      background-color: rgba(249, 249, 249, 0.15);
+      color: #fff;
+    }
+    &__btn:hover {
+      background-color: rgba(249, 249, 249, 0.3);
+      transition: 0.4s linear;
+    }
+  }
+}

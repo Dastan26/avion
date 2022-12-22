@@ -16,13 +16,24 @@
       </div>
     </section>
     <brand-benefits></brand-benefits>
+    <products-components></products-components>
+    <hero-components></hero-components>
+    <signup-components></signup-components>
   </main>
 </template>
 
 <script>
 import BrandBenefits from "./components/Brand-benefits";
+import ProductsComponents from "./components/Products-components";
+import HeroComponents from "./components/Hero-components";
+import SignupComponents from "./components/Signup-components";
 export default {
-  components: { BrandBenefits },
+  components: {
+    BrandBenefits,
+    ProductsComponents,
+    HeroComponents,
+    SignupComponents,
+  },
 };
 </script>
 
