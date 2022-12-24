@@ -6,17 +6,20 @@
     />
     <header-component></header-component>
     <main-page></main-page>
+    <footer-component></footer-component>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "./modules/header/Header-component";
 import MainPage from "./modules/main/Main-page";
+import FooterComponent from "./modules/footer/Footer-component";
 
 export default {
   components: {
     HeaderComponent,
     MainPage,
+    FooterComponent,
   },
   data: function () {
     return {};

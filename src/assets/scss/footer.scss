@@ -1,0 +1,69 @@
+.footer {
+  background-color: rgba(42, 37, 75, 1);
+  color: #fff;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      router-link {
+        font-size: 14px;
+      }
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      &__action {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    input {
+      width: 509px;
+      padding: 17px 32px;
+      border: none;
+      font-size: 16px;
+      height: 54px;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+    input::placeholder {
+      color: #fff;
+    }
+    .input-btn {
+      background-color: rgba(255, 255, 255, 1);
+      transition: 0.3s linear;
+    }
+
+    .input-btn:hover {
+      background-color: rgba(65, 65, 157, 0.8);
+    }
+  }
+
+  &-underline {
+    height: 1px;
+    border: 1px solid #4e4d93;
+    width: 100%;
+  }
+
+  .social-links {
+    margin-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+
+    &__block {
+      display: flex;
+      gap: 24px;
+    }
+  }
+}
