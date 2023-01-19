@@ -1,7 +1,7 @@
 {
-  "product": [
+  "products": [
     {
-      "img": "@/assets/images/Botle.png",
+      "img": "/home/dastan/Desktop/avion/avion/src/assets/images/Botle.png",
       "title": "asdas",
       "price": "125",
       "description": ";lmjn;oni",
@@ -12,7 +12,7 @@
       "id": 1
     },
     {
-      "img": "@/assets/images/Botle.png",
+      "img": "src/assets/images/Botle.png",
       "title": "Vase",
       "price": "125",
       "description": "vase like vase",
@@ -23,7 +23,7 @@
       "id": 2
     },
     {
-      "img": "@/assets/images/Botle.png",
+      "img": "~/assets/images/Botle.png",
       "title": "as",
       "price": "125",
       "description": "kjh;kjn",
@@ -32,6 +32,17 @@
       "depth": "20",
       "quantity": "20",
       "id": 3
+    },
+    {
+      "img": "../../../assets/images/Botle.png",
+      "title": "as",
+      "price": "125",
+      "description": "asdas",
+      "height": "15",
+      "width": "55",
+      "depth": "10",
+      "quantity": "30",
+      "id": 4
     }
   ]
 }

@@ -4,7 +4,7 @@
       <div class="products-wrapper">
         <div
           class="product-card"
-          v-for="(product, index) in getProducts"
+          v-for="(product, index) in products"
           :key="index"
         >
           <img class="products-items__icon" :src="product.image" alt="icon" />
@@ -50,7 +50,7 @@
        -->
       </div>
       <button class="hero-collection__btn">
-        <router-link to="#">View collection</router-link>
+        <router-link to="/products">View collection</router-link>
       </button>
     </div>
   </section>
@@ -60,21 +60,21 @@
 import { mapGetters } from "vuex";
 
 export default {
-  name: "Products-component",
   data() {
     return {
       limitValue: 4,
     };
   },
 
-  computed: mapGetters(["getProducts"]),
+  computed: mapGetters(["products"]),
 
   created() {
     this.$store.dispatch("allProducts", this.limitValue);
   },
   methods: {
     loadMoreProducts() {
-      this.limitValue += 3;
+      this.limitValue += 4;
+
       this.$store.dispatch("allProducts", this.limitValue);
     },
   },

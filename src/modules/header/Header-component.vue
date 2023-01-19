@@ -30,7 +30,7 @@
       <div class="header-line"></div>
       <ul class="header-items">
         <li class="header-item">
-          <router-link to="#">Products</router-link>
+          <router-link to="/products">Products</router-link>
           <router-link to="admin">Admin page</router-link>
         </li>
       </ul>

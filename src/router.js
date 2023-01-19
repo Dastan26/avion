@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import MainPage from "./modules/main/Main-page.vue";
 import AdminPage from "@/modules/admin/Adminn-page";
 import CartPage from "@/modules/cart/Cart-page";
+import ProductsPage from "@/modules/products/Products-page";
 
 export default new VueRouter({
   mode: "history",
@@ -24,6 +25,11 @@ export default new VueRouter({
       name: "cart",
       path: "/cart",
       component: CartPage,
+    },
+    {
+      name: "products",
+      path: "/products",
+      component: ProductsPage,
     },
   ],
 });

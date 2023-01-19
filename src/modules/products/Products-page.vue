@@ -1,0 +1,45 @@
+<template>
+  <div class="container">
+    <div class="products-wrapper">
+      <div
+        class="products-cards"
+        v-for="(product, index) in products"
+        :key="index"
+      >
+        <img class="products-items__icon" :src="product.image" alt="icon" />
+        <h2 class="products-items__title">{{ product.title }}</h2>
+        <h3 class="products-items__cost">£{{ product.price }}</h3>
+      </div>
+    </div>
+    <button class="hero-collection__btn">
+      <router-link to="/products">View collection</router-link>
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      products: "",
+    };
+  },
+
+  created() {
+    fetch(`http://localhost:3000/products`)
+      .then((res) => res.json())
+      .then((json) => (this.products = json));
+  },
+
+  methods: {
+    loadMoreProducts() {
+      this.limitValue += 4;
+      this.$store.dispatch("allProducts", this.limitValue);
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+@import "../../assets/scss/products.scss";
+</style>

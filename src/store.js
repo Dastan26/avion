@@ -5,11 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    product: "",
+    products: "",
   },
   mutations: {
     SET_PRODUCTS(state, newProducts) {
-      state.product = newProducts;
+      state.products = newProducts;
     },
   },
   actions: {
@@ -23,6 +23,7 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    getProducts: (state) => state.product,
+    products: (state) => state.products,
+    getProducts: (state) => state.products,
   },
 });
