@@ -9,6 +9,7 @@
     color: #2a254b;
     text-align: start;
     margin: 0 auto;
+    transition: transform 0.3s;
 
     &__title {
       font-size: 20px;
@@ -18,5 +19,8 @@
     &__text {
       font-size: 16px;
     }
+  }
+  &-cards:hover {
+    transform: scale(1.03);
   }
 }

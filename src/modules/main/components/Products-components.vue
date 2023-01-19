@@ -2,7 +2,16 @@
   <section class="products">
     <div class="container">
       <div class="products-wrapper">
-        <div class="products-cards">
+        <div
+          class="product-card"
+          v-for="(product, index) in getProducts"
+          :key="index"
+        >
+          <img class="products-items__icon" :src="product.image" alt="icon" />
+          <h2 class="products-items__title">{{ product.title }}</h2>
+          <h3 class="products-items__cost">£{{ product.price }}</h3>
+        </div>
+        <!-- <div class="products-cards">
           <img
             class="products-items__icon"
             src="../../../assets/images/Chair.png"
@@ -38,15 +47,37 @@
           <h3 class="products-items__title">The Lucy Lamp</h3>
           <p class="products-items__cost">£399</p>
         </div>
+       -->
       </div>
-      <button class="hero-collection__btn">View collection</button>
+      <button class="hero-collection__btn">
+        <router-link to="#">View collection</router-link>
+      </button>
     </div>
   </section>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "Products-component",
+  data() {
+    return {
+      limitValue: 4,
+    };
+  },
+
+  computed: mapGetters(["getProducts"]),
+
+  created() {
+    this.$store.dispatch("allProducts", this.limitValue);
+  },
+  methods: {
+    loadMoreProducts() {
+      this.limitValue += 3;
+      this.$store.dispatch("allProducts", this.limitValue);
+    },
+  },
 };
 </script>
 

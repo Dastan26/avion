@@ -7,7 +7,7 @@
             <li class="nav-menu__item">
               {{ block.block_name }}
             </li>
-            <li v-for="item in block.items" :key="(item.title, item.link)">
+            <li v-for="item in block.items" :key="(item.id, item.link)">
               <router-link :to="{ path: item.link }">{{
                 item.title
               }}</router-link>
@@ -65,23 +65,23 @@ export default {
           items: [
             {
               title: "New arrivals",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Best sellers",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Recently viewed",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Popular this week",
-              link: "#",
+              link: "#!",
             },
             {
               title: "All products",
-              link: "#",
+              link: "#!",
             },
           ],
         },
@@ -90,27 +90,27 @@ export default {
           items: [
             {
               title: "Crockery",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Furniture",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Homeware",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Plant pots",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Chairs",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Crockery",
-              link: "#",
+              link: "#!",
             },
           ],
         },
@@ -119,23 +119,23 @@ export default {
           items: [
             {
               title: "About us",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Vacancies",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Contact us",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Privacy",
-              link: "#",
+              link: "#!",
             },
             {
               title: "Returns policy",
-              link: "#",
+              link: "#!",
             },
           ],
         },

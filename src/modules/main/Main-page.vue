@@ -28,6 +28,7 @@ import ProductsComponents from "./components/Products-components";
 import HeroComponents from "./components/Hero-components";
 import SignupComponents from "./components/Signup-components";
 export default {
+  name: "Main-page",
   components: {
     BrandBenefits,
     ProductsComponents,

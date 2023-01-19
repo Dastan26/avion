@@ -5,20 +5,18 @@
       rel="stylesheet"
     />
     <header-component></header-component>
-    <main-page></main-page>
+    <router-view></router-view>
     <footer-component></footer-component>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "./modules/header/Header-component";
-import MainPage from "./modules/main/Main-page";
 import FooterComponent from "./modules/footer/Footer-component";
 
 export default {
   components: {
     HeaderComponent,
-    MainPage,
     FooterComponent,
   },
   data: function () {
@@ -41,8 +39,8 @@ nav {
   padding: 30px;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
   }
 }
 </style>

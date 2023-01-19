@@ -15,7 +15,7 @@
           </li>
           <div class="user-block">
             <li class="nav-menu__item">
-              <router-link to="#"
+              <router-link to="/cart"
                 ><img src="../../assets/icons/ShoppingCart.svg" alt="cart icon"
               /></router-link>
             </li>
@@ -31,6 +31,7 @@
       <ul class="header-items">
         <li class="header-item">
           <router-link to="#">Products</router-link>
+          <router-link to="admin">Admin page</router-link>
         </li>
       </ul>
     </div>
@@ -40,7 +41,9 @@
 <script>
 export default {
   data: function () {
-    return;
+    return {
+      products: [],
+    };
   },
 };
 </script>
