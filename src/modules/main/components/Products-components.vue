@@ -3,7 +3,7 @@
     <div class="container">
       <div class="products-wrapper">
         <div
-          class="product-card"
+          class="products-cards"
           v-for="(product, index) in products"
           :key="index"
         >
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+// import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -66,17 +66,22 @@ export default {
     };
   },
 
-  computed: mapGetters(["products"]),
+  // computed: mapGetters(["products"]),
+  computed: {
+    products: {
+      get() {
+        return this.$store.getters.products;
+      },
+      set(value) {
+        this.$store.commit("SET_PRODUCTS", value);
+      },
+    },
+  },
 
   created() {
-    this.$store.dispatch("allProducts", this.limitValue);
-  },
-  methods: {
-    loadMoreProducts() {
-      this.limitValue += 4;
-
-      this.$store.dispatch("allProducts", this.limitValue);
-    },
+    fetch(`http://localhost:3000/products?limit=${this.limitValue}`)
+      .then((res) => res.json())
+      .then((json) => (this.products = json));
   },
 };
 </script>
