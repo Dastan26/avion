@@ -2,7 +2,7 @@
   <div class="details">
     <div class="container">
       <div class="details-wrapper">
-        <img :src="product.image" alt="chair" />
+        <img :src="product.img" alt="chair" />
         <div class="product-info">
           <h1 class="product-info__title">{{ product.title }}</h1>
           <h2 class="product-info__price">£{{ product.price }}</h2>

@@ -13,6 +13,13 @@
               ><img src="../../assets/icons/Avion.svg" alt="logo"
             /></router-link>
           </li>
+          <ul class="header-items">
+            <li class="header-item">
+              <router-link to="/products">Products</router-link>
+              <router-link to="admin">Admin page</router-link>
+              <router-link to="/about">About us</router-link>
+            </li>
+          </ul>
           <div class="user-block">
             <li class="nav-menu__item">
               <router-link to="/cart"
@@ -31,13 +38,6 @@
           </div>
         </ul>
       </nav>
-      <div class="header-line"></div>
-      <ul class="header-items">
-        <li class="header-item">
-          <router-link to="/products">Products</router-link>
-          <router-link to="admin">Admin page</router-link>
-        </li>
-      </ul>
     </div>
   </header>
 </template>

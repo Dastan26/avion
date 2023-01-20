@@ -8,6 +8,7 @@ import AdminPage from "@/modules/admin/Adminn-page";
 import CartPage from "@/modules/cart/Cart-page";
 import ProductsPage from "@/modules/products/Products-page";
 import ProductDetails from "@/modules/main/components/Product-details";
+import AboutPage from "@/modules/about/About-page";
 
 export default new VueRouter({
   mode: "history",
@@ -36,6 +37,11 @@ export default new VueRouter({
       name: "product",
       path: "/product/:id",
       component: ProductDetails,
+    },
+    {
+      name: "about",
+      path: "/about",
+      component: AboutPage,
     },
   ],
 });

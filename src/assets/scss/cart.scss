@@ -16,8 +16,45 @@ h2 {
   justify-content: space-between;
 }
 .product {
+  padding: 0 62px;
   display: flex;
+  margin: 28px 0 32px;
+}
+.product-info {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
+  img {
+    max-width: 109px;
+  }
+
+  &__group {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__details {
+    display: flex;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: start;
+
+    .product-title {
+      color: #2a254b;
+      font-size: 20px;
+    }
+    .product-description {
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      overflow: hidden;
+    }
+    .product-price {
+      font-size: 16px;
+    }
+  }
 }
 .product-quantity {
   margin-top: 40px;
@@ -43,6 +80,28 @@ h2 {
       border: none;
       color: #151515;
       max-height: 46px;
+    }
+  }
+}
+.line {
+  border: 1px solid #f9f9f9;
+  width: 90%;
+  margin: 0 auto;
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 63px;
+  font-size: 14px;
+
+  .taxes {
+    font-size: 14px;
+  }
+  .subtotal {
+    display: flex;
+
+    &-title {
+      font-size: 20px;
     }
   }
 }

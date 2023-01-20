@@ -8,7 +8,11 @@
           v-for="(product, index) in products"
           :key="index"
         >
-          <img class="products-items__icon" :src="product.image" alt="icon" />
+          <img
+            class="products-items__icon"
+            v-bind:src="product.img"
+            alt="icon"
+          />
           <h2 class="products-items__title">{{ product.title }}</h2>
           <h3 class="products-items__cost">£{{ product.price }}</h3>
         </router-link>

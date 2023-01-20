@@ -9,8 +9,8 @@
           <input
             type="text"
             id="image"
-            v-model="imagePath"
-            @input="updateImagePath"
+            v-model="product.img"
+            @change="updateImagePath"
           />
           <label for="title">Title</label>
           <input type="text" id="title" v-model="product.title" />
@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import imageSrc from "@/assets/images/chairD.png";
 export default {
   data() {
     return {
@@ -51,7 +50,7 @@ export default {
         depth: "",
         quantity: "",
       },
-      imagePath: imageSrc,
+      imagePath: "",
     };
   },
   methods: {
@@ -59,7 +58,7 @@ export default {
       this.$refs.form.reset();
     },
     updateImagePath(event) {
-      this.imagePath = event.target.value;
+      this.imagePath = URL.createObjectURL(event.target.files[0]);
     },
 
     addProducts() {
