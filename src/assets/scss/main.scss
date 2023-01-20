@@ -3,7 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 85vh;
-
+  a {
+    text-decoration: none;
+  }
   &-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -12,9 +14,11 @@
   &-collection__text {
     margin: 48px 56px;
     text-align: left;
+
     p {
       color: #5b5676;
       margin-top: 20px;
+      margin-bottom: 157px;
     }
   }
 
@@ -25,12 +29,37 @@
     align-items: flex-start;
 
     &__btn {
+      font-family: "Satoshi";
+      font-size: 16px;
+      background-color: #f9f9f9;
+      color: #2a254b;
+      padding: 16px 32px;
+      cursor: pointer;
+      border: none;
       margin-top: 157px;
     }
 
     &__btn:hover {
       background-color: #eee9f7;
       transition: 0.3s linear;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    background-size: 100%;
+    background-position: bottom;
+    height: 58vh;
+    &-collection {
+      margin-top: 0 !important;
+
+      &__text {
+        margin: 47px 24px;
+      }
+      &__btn {
+        margin-top: 32px !important;
+        padding: 16px 116px;
+      }
     }
   }
 }

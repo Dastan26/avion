@@ -11,6 +11,9 @@ h2 {
   align-content: space-between;
   background-color: #fff;
 }
+.mobile-title {
+  display: none;
+}
 .titles {
   display: flex;
   justify-content: space-between;
@@ -102,6 +105,82 @@ h2 {
 
     &-title {
       font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cart {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .cart-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .titles {
+    display: none;
+  }
+  .mobile-title {
+    display: block;
+    text-align: left;
+  }
+  .product {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .product-info {
+    flex-direction: column;
+    img {
+      max-width: 133px;
+    }
+    &__group {
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+    &__details {
+      max-width: 100%;
+      .product-title {
+        font-size: 16px;
+      }
+      .product-description {
+        font-size: 12px;
+      }
+      .product-price {
+        font-size: 14px;
+      }
+    }
+  }
+  .product-quantity {
+    &__input {
+      max-width: 100%;
+      margin-left: 35px;
+      input {
+        max-width: 40px;
+      }
+      .input-btn {
+        padding: 5px;
+      }
+    }
+  }
+  .total-value {
+    display: none;
+  }
+  .summary {
+    margin: 10px;
+    font-size: 12px;
+    flex-direction: column-reverse;
+    align-items: end;
+    .taxes {
+      font-size: 12px;
+    }
+    .subtotal {
+      &-title {
+        font-size: 20px;
+        margin-right: 10px;
+      }
     }
   }
 }

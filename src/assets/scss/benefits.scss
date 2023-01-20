@@ -22,3 +22,21 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .benefits {
+    margin-top: 48px;
+    &-wrapper {
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+    &-items {
+      max-width: 342px;
+    }
+    &-title {
+      margin: 0 24px;
+      max-width: 274px;
+      text-align: left;
+    }
+  }
+}

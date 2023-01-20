@@ -63,3 +63,29 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .footer {
+    .nav {
+      flex-wrap: wrap;
+      gap: 95px;
+      padding: 40px 45px 40px 25px;
+
+      Copy code &-menu,
+      .input-group {
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        padding: 38px 32px;
+      }
+    }
+    .social-links {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &__block {
+        display: none;
+      }
+    }
+  }
+}

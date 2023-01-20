@@ -30,3 +30,38 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .hero {
+    &-wrapper {
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 342px;
+      margin: 0 auto 32px;
+    }
+    &-block {
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 16px;
+      &__btn {
+        margin-top: 56px;
+        width: 278px;
+      }
+      &__title {
+        margin-top: 0;
+      }
+      &__title {
+        font-size: 20px;
+      }
+      &__text {
+        max-width: 100%;
+        font-size: 14px;
+        margin-top: 12px;
+      }
+    }
+    &-image {
+      max-width: 344px;
+    }
+  }
+}

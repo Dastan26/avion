@@ -44,3 +44,12 @@
     border-radius: 60%;
   }
 }
+@media (max-width: 767px) {
+  .header-nav {
+    flex-direction: row-reverse;
+  }
+  .header-items,
+  .user-block {
+    display: none !important;
+  }
+}

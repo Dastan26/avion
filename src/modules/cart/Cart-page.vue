@@ -8,6 +8,7 @@
           <h2 class="title-total">Total</h2>
         </div>
         <div class="line"></div>
+        <h4 class="mobile-title">Your shopping cart</h4>
         <div class="product" v-for="(product, index) in cart" :key="index">
           <div class="product-info">
             <div class="product-info__group">

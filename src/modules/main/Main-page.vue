@@ -9,7 +9,9 @@
                 Luxury homeware for people who love timeless design quality
               </h2>
               <p>Shop the new Spring 2022 collection today</p>
-              <button class="hero-collection__btn">View collection</button>
+              <router-link to="/products" class="hero-collection__btn"
+                >View collection</router-link
+              >
             </div>
           </div>
         </div>

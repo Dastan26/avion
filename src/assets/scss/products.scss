@@ -51,3 +51,29 @@
     background-color: #ebe8f4;
   }
 }
+@media (max-width: 767px) {
+  .products {
+    .products-banner {
+      height: auto;
+      &__title {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+    &-wrapper {
+      justify-content: center;
+    }
+    &-cards {
+      margin: 16px;
+      max-width: 163px;
+
+      .products-items__icon {
+        max-width: 163px;
+      }
+    }
+    .hero-collection__btn {
+      padding: 16px 122px;
+    }
+  }
+}
