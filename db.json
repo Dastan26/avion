@@ -23,28 +23,6 @@
       "id": 2
     },
     {
-      "img": "~/assets/images/Botle.png",
-      "title": "as",
-      "price": "125",
-      "description": "kjh;kjn",
-      "height": "15",
-      "width": "55",
-      "depth": "20",
-      "quantity": "20",
-      "id": 3
-    },
-    {
-      "img": "../../../assets/images/Botle.png",
-      "title": "as",
-      "price": "125",
-      "description": "asdas",
-      "height": "15",
-      "width": "55",
-      "depth": "10",
-      "quantity": "30",
-      "id": 4
-    },
-    {
       "img": "@/assets/images/Botle.png",
       "title": "The Dandy chair",
       "price": "250",
@@ -54,6 +32,17 @@
       "depth": "40",
       "quantity": "60",
       "id": 5
+    },
+    {
+      "img": "",
+      "title": "The Dandy Chair",
+      "price": "250",
+      "description": "A timeless design, with premium materials features as one of our most popular and iconic pieces. The dandy chair is perfect for any stylish living space with beech legs and lambskin leather upholstery.",
+      "height": "110",
+      "width": "75",
+      "depth": "50",
+      "quantity": "",
+      "id": 6
     }
   ]
 }

@@ -6,15 +6,19 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     products: "",
+    cart: [],
   },
   mutations: {
     SET_PRODUCTS(state, newProducts) {
       state.products = newProducts;
     },
+    SET_CART(state, newCart) {
+      state.cart = newCart;
+    },
   },
   actions: {
     allProducts({ commit }, payload) {
-      fetch(`http://localhost:3000=${payload}`)
+      fetch(`http://localhost:3000/products?limit=${payload}`)
         .then((res) => res.json())
         .then((json) => {
           commit("SET_PRODUCTS", json);
@@ -25,5 +29,6 @@ export default new Vuex.Store({
   getters: {
     products: (state) => state.products,
     getProducts: (state) => state.products,
+    getCart: (state) => state.cart,
   },
 });

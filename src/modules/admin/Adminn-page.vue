@@ -9,8 +9,8 @@
           <input
             type="text"
             id="image"
-            v-model="product.img"
-            @input="imagePath"
+            v-model="imagePath"
+            @input="updateImagePath"
           />
           <label for="title">Title</label>
           <input type="text" id="title" v-model="product.title" />
@@ -29,8 +29,6 @@
           <input type="text" id="width" v-model="product.width" />
           <label for="depth">Depth</label>
           <input type="text" id="depth" v-model="product.depth" />
-          <label for="quantity">Quantity</label>
-          <input type="text" id="quantity" v-model="product.quantity" />
           <button type="button" @click="addProducts">Add</button>
         </form>
       </div>

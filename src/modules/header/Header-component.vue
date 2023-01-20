@@ -16,8 +16,12 @@
           <div class="user-block">
             <li class="nav-menu__item">
               <router-link to="/cart"
-                ><img src="../../assets/icons/ShoppingCart.svg" alt="cart icon"
-              /></router-link>
+                ><span>{{ cartCounter }}</span>
+                <img
+                  src="../../assets/icons/ShoppingCart.svg"
+                  alt="cart icon"
+                />
+              </router-link>
             </li>
             <li class="nav-menu__item">
               <router-link to="#"
@@ -44,6 +48,12 @@ export default {
     return {
       products: [],
     };
+  },
+
+  computed: {
+    cartCounter() {
+      return this.$store.getters.getCart.length;
+    },
   },
 };
 </script>

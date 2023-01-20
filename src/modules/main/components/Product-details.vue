@@ -36,7 +36,7 @@
               <button @click="increment" class="input-btn">+</button>
             </div>
           </div>
-          <button>Add to cart</button>
+          <button @click="addToCart">Add to cart</button>
         </div>
       </div>
       <div class="products-list">
@@ -61,6 +61,12 @@ export default {
     };
   },
 
+  computed: {
+    cart() {
+      return this.$store.getters.getCart;
+    },
+  },
+
   methods: {
     increment() {
       this.quantity += 1;
@@ -69,6 +75,11 @@ export default {
       if (this.quantity > 0) {
         this.quantity -= 1;
       }
+    },
+
+    addToCart() {
+      this.cart.push(this.product);
+      this.$store.commit("SET_CART", this.cart);
     },
   },
 

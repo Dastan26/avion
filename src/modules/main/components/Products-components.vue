@@ -13,7 +13,7 @@
           <h3 class="products-items__cost">£{{ product.price }}</h3>
         </router-link>
       </div>
-      <router-link class="hero-collection__btn" to="/product-page"
+      <router-link class="hero-collection__btn" to="/products"
         >View collection
       </router-link>
     </div>
@@ -37,10 +37,9 @@ export default {
       },
     },
   },
+
   created() {
-    fetch(`http://localhost:3000/products?limit=${this.limitValue}`)
-      .then((res) => res.json())
-      .then((json) => (this.products = json));
+    this.$store.dispatch("allProducts", this.limitValue);
   },
 };
 </script>

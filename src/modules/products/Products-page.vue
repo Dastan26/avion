@@ -2,7 +2,8 @@
   <div class="products">
     <div class="container">
       <div class="products-wrapper">
-        <div
+        <router-link
+          :to="{ name: 'product', params: { id: product.id } }"
           class="products-cards"
           v-for="(product, index) in products"
           :key="index"
@@ -10,7 +11,7 @@
           <img class="products-items__icon" :src="product.image" alt="icon" />
           <h2 class="products-items__title">{{ product.title }}</h2>
           <h3 class="products-items__cost">£{{ product.price }}</h3>
-        </div>
+        </router-link>
       </div>
       <button class="hero-collection__btn">View collection</button>
     </div>
