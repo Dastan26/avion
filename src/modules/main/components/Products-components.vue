@@ -2,7 +2,8 @@
   <section class="products">
     <div class="container">
       <div class="products-wrapper">
-        <div
+        <router-link
+          :to="{ name: 'product', params: { id: product.id } }"
           class="products-cards"
           v-for="(product, index) in products"
           :key="index"
@@ -10,63 +11,22 @@
           <img class="products-items__icon" :src="product.image" alt="icon" />
           <h2 class="products-items__title">{{ product.title }}</h2>
           <h3 class="products-items__cost">£{{ product.price }}</h3>
-        </div>
-        <!-- <div class="products-cards">
-          <img
-            class="products-items__icon"
-            src="../../../assets/images/Chair.png"
-            alt="chair icon"
-          />
-          <h3 class="products-items__title">The Dandy chair</h3>
-          <p class="products-items__cost">£250</p>
-        </div>
-        <div class="products-cards">
-          <img
-            class="products-items__icon"
-            src="../../../assets/images/Vase.png"
-            alt="delivery icon"
-          />
-          <h3 class="products-items__title">Rustic Vase Set</h3>
-          <p class="products-items__cost">£155</p>
-        </div>
-        <div class="products-cards">
-          <img
-            class="products-items__icon"
-            src="../../../assets/images/Botle.png"
-            alt="delivery icon"
-          />
-          <h3 class="products-items__title">The Silky Vase</h3>
-          <p class="products-items__cost">£125</p>
-        </div>
-        <div class="products-cards">
-          <img
-            class="products-items__icon"
-            src="../../../assets/images/Lamp.png"
-            alt="delivery icon"
-          />
-          <h3 class="products-items__title">The Lucy Lamp</h3>
-          <p class="products-items__cost">£399</p>
-        </div>
-       -->
+        </router-link>
       </div>
-      <button class="hero-collection__btn">
-        <router-link to="/products">View collection</router-link>
-      </button>
+      <router-link class="hero-collection__btn" to="/product-page"
+        >View collection
+      </router-link>
     </div>
   </section>
 </template>
 
 <script>
-// import { mapGetters } from "vuex";
-
 export default {
   data() {
     return {
       limitValue: 4,
     };
   },
-
-  // computed: mapGetters(["products"]),
   computed: {
     products: {
       get() {
@@ -77,7 +37,6 @@ export default {
       },
     },
   },
-
   created() {
     fetch(`http://localhost:3000/products?limit=${this.limitValue}`)
       .then((res) => res.json())

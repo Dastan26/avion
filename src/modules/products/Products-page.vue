@@ -12,9 +12,7 @@
           <h3 class="products-items__cost">£{{ product.price }}</h3>
         </div>
       </div>
-      <button class="hero-collection__btn">
-        <router-link to="/products">View collection</router-link>
-      </button>
+      <button class="hero-collection__btn">View collection</button>
     </div>
   </div>
 </template>

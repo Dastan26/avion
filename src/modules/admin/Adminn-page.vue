@@ -6,7 +6,12 @@
         <h3>Only for admins</h3>
         <form action="" class="form" ref="form">
           <label for="image">Image URL</label>
-          <input type="text" id="image" v-model="product.img" />
+          <input
+            type="text"
+            id="image"
+            v-model="product.img"
+            @input="imagePath"
+          />
           <label for="title">Title</label>
           <input type="text" id="title" v-model="product.title" />
           <label for="price">Price</label>
@@ -34,6 +39,7 @@
 </template>
 
 <script>
+import imageSrc from "@/assets/images/chairD.png";
 export default {
   data() {
     return {
@@ -47,16 +53,20 @@ export default {
         depth: "",
         quantity: "",
       },
+      imagePath: imageSrc,
     };
   },
   methods: {
     clearForm() {
       this.$refs.form.reset();
     },
+    updateImagePath(event) {
+      this.imagePath = event.target.value;
+    },
 
     addProducts() {
       try {
-        fetch("http://localhost:3000/product", {
+        fetch("http://localhost:3000/products", {
           method: "POST",
           headers: {
             "Content-type": "application/json",

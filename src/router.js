@@ -34,7 +34,7 @@ export default new VueRouter({
     },
     {
       name: "product",
-      path: "/product:id",
+      path: "/product/:id",
       component: ProductDetails,
     },
   ],
