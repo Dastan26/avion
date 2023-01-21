@@ -5,7 +5,7 @@
         <router-link
           :to="{ name: 'product', params: { id: product.id } }"
           class="products-cards"
-          v-for="(product, index) in products"
+          v-for="(product, index) in limitedProducts"
           :key="index"
         >
           <img
@@ -39,6 +39,9 @@ export default {
       set(value) {
         this.$store.commit("SET_PRODUCTS", value);
       },
+    },
+    limitedProducts() {
+      return this.products.slice(0, this.limitValue);
     },
   },
 
