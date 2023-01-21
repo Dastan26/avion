@@ -1,0 +1,42 @@
+.benefits {
+  margin-top: 80px;
+  &-wrapper {
+    display: flex;
+    margin: 36px auto 110px;
+  }
+  &-items {
+    max-width: 305px;
+    color: #2a254b;
+    text-align: start;
+    margin: 0 auto;
+    padding: 48px;
+    background-color: #f9f9f9;
+
+    &__title {
+      font-size: 20px;
+      margin: 12px 0 12px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits {
+    margin-top: 48px;
+    &-wrapper {
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+    &-items {
+      max-width: 342px;
+    }
+    &-title {
+      margin: 0 24px;
+      max-width: 274px;
+      text-align: left;
+    }
+  }
+}

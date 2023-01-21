@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Clash display";
+  font-size: 32px;
+  color: #22202e;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Satoshi";
+  font-size: 18px;
+}
+
+button {
+  font-family: "Satoshi";
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #2a254b;
+  padding: 16px 32px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #eee9f7;
+  transition: 0.3s linear;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 20px;
+  }
+}

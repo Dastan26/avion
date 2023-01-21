@@ -1,0 +1,207 @@
+.cart {
+  background-color: #f9f9f9;
+}
+h2 {
+  font-size: 14px;
+  padding: 72px 62px 44px 63px;
+}
+.cart-wrapper {
+  display: grid;
+  flex-direction: column;
+  align-content: space-between;
+  background-color: #fff;
+}
+.mobile-title {
+  display: none;
+}
+.titles {
+  display: flex;
+  justify-content: space-between;
+}
+.product {
+  padding: 0 62px;
+  display: flex;
+  margin: 28px 0 32px;
+}
+.product-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    max-width: 109px;
+  }
+
+  &__group {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__details {
+    display: flex;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: start;
+
+    .product-title {
+      color: #2a254b;
+      font-size: 20px;
+    }
+    .product-description {
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      overflow: hidden;
+    }
+    .product-price {
+      font-size: 16px;
+    }
+  }
+}
+.product-quantity {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__input {
+    max-width: 122px;
+    display: flex;
+    background-color: #f9f9f9;
+    input {
+      max-height: 46px;
+      max-width: 66px;
+      text-align: center;
+      border: none;
+      background-color: #f9f9f9;
+    }
+    .input-btn {
+      padding: 10px;
+      margin-top: 0;
+      background-color: #f9f9f9;
+      border: none;
+      color: #151515;
+      max-height: 46px;
+    }
+  }
+}
+.line {
+  border: 1px solid #f9f9f9;
+  width: 90%;
+  margin: 0 auto;
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 63px;
+  font-size: 14px;
+
+  .taxes {
+    font-size: 14px;
+  }
+  .subtotal {
+    display: flex;
+
+    &-title {
+      font-size: 20px;
+    }
+  }
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: end;
+  margin: 16px 62px 54px;
+  button {
+    background-color: #2a254b;
+    color: #fff;
+    transition: ease-in 0.3s;
+  }
+  button:hover {
+    background-color: #1e193e;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cart {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .cart-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .titles {
+    display: none;
+  }
+  .mobile-title {
+    display: block;
+    text-align: left;
+  }
+  .product {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .product-info {
+    flex-direction: column;
+    img {
+      max-width: 133px;
+    }
+    &__group {
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+    &__details {
+      max-width: 100%;
+      .product-title {
+        font-size: 16px;
+      }
+      .product-description {
+        font-size: 12px;
+      }
+      .product-price {
+        font-size: 14px;
+      }
+    }
+  }
+  .product-quantity {
+    &__input {
+      max-width: 100%;
+      margin-left: 35px;
+      input {
+        max-width: 40px;
+      }
+      .input-btn {
+        padding: 5px;
+      }
+    }
+  }
+  .total-value {
+    display: none;
+  }
+  .summary {
+    margin: 10px;
+    font-size: 12px;
+    flex-direction: column-reverse;
+    align-items: end;
+    .taxes {
+      font-size: 12px;
+    }
+    .subtotal {
+      &-title {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .cart-btn {
+    max-width: 342px;
+    margin: 16px 0 54px;
+    button {
+      width: 100%;
+    }
+  }
+}

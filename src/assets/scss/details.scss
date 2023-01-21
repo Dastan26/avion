@@ -1,0 +1,185 @@
+.details {
+  a {
+    text-decoration: none;
+  }
+  &-wrapper {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    gap: 67px;
+
+    img {
+      max-width: 607px;
+      max-height: 661px;
+      width: 100%;
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &__title {
+        font-size: 36px;
+        margin-bottom: 16px;
+      }
+      &__price {
+        font-size: 24px;
+        font-family: "Satoshi";
+        margin-bottom: 28px;
+      }
+      .line {
+        border: 1px solid #ebe8f4;
+        width: 100%;
+        margin-bottom: 24px;
+      }
+      &__description h4 {
+        margin-bottom: 14px;
+      }
+
+      &__description h4,
+      p {
+        text-align: start;
+        font-size: 16px;
+        max-width: 498px;
+
+        &-title {
+          font-family: "Satoshi";
+        }
+      }
+    }
+    .product-characteristics {
+      margin-top: 36px;
+      .product-info__dimensions {
+        margin-bottom: 24px;
+      }
+      table {
+        font-size: 16px;
+        font-family: "Satoshi";
+      }
+      th {
+        font-weight: 400;
+        padding: 5px 49px;
+      }
+      td:first-child,
+      th:first-child {
+        padding: 5px 49px 5px 0;
+        border-right: 1px solid #ebe8f4;
+        height: 90%;
+      }
+      td:last-child,
+      th:last-child {
+        padding: 5px 49px;
+        border-left: 1px solid #ebe8f4;
+      }
+      font-size: 16px;
+    }
+    .product-quantity {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &__input {
+        max-width: 122px;
+        display: flex;
+        background-color: #fff;
+        input {
+          max-height: 46px;
+          max-width: 66px;
+          text-align: center;
+          border: none;
+        }
+        .input-btn {
+          padding: 10px;
+          margin-top: 0;
+          background-color: #fff;
+          border: none;
+          color: #151515;
+          max-height: 46px;
+        }
+      }
+    }
+    button {
+      color: #fff;
+      background-color: #1e193e;
+      margin-top: 48px;
+    }
+    button:hover {
+      background-color: #4e4d93;
+    }
+  }
+  .products-list h3 {
+    margin-top: 80px;
+    text-align: left;
+  }
+}
+.hero-collection__btn {
+  color: #151515;
+  background-color: #f9f9f9;
+  text-decoration: none;
+}
+@media only screen and (max-width: 480px) {
+  .details {
+    &-wrapper {
+      flex-direction: column;
+      padding: 20px;
+    }
+    flex-direction: column;
+    gap: 0;
+    .product-info {
+      max-width: 100%;
+      &__title {
+        font-size: 24px;
+      }
+      &__price {
+        font-size: 18px;
+      }
+      &__description h4,
+      p {
+        font-size: 14px;
+      }
+    }
+    .product-characteristics {
+      .product-info__dimensions {
+        font-size: 16px;
+      }
+      table {
+        font-size: 14px;
+        width: 342px;
+        th {
+          padding: 5px;
+        }
+        td:first-child,
+        th:first-child {
+          padding: 5px 5px 5px 0;
+        }
+        td:last-child,
+        th:last-child {
+          padding: 5px;
+        }
+      }
+    }
+    .product-quantity {
+      &__input {
+        max-width: 100%;
+        max-width: 100%;
+        width: 342px;
+        justify-content: space-around;
+        input {
+          max-width: 40px;
+        }
+        .input-btn {
+          padding: 5px;
+        }
+      }
+    }
+    button {
+      margin-top: 20px;
+      padding: 16px 134px;
+    }
+    .products-list h3 {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  }
+}

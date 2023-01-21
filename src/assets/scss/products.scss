@@ -1,0 +1,89 @@
+.products {
+  .products-banner {
+    background-image: url(@/assets/images/allProducts.png);
+    width: 100%;
+    height: 209px;
+    &__title {
+      display: flex;
+      color: #fff;
+      padding: 123px 0 36px;
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  padding-bottom: 40px;
+  margin-top: 20px;
+  &-wrapper {
+    display: flex;
+    margin: 36px auto 48px;
+    flex-wrap: wrap;
+  }
+  &-cards {
+    max-width: 305px;
+    color: #2a254b;
+    text-align: start;
+    margin: 0 auto;
+    transition: transform 0.3s;
+
+    &__title {
+      font-size: 20px;
+      margin: 12px 0 12px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+  &-cards:hover {
+    transform: scale(1.03);
+  }
+  .hero-collection__btn {
+    padding: 16px 32px;
+    color: #151515;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    transition: ease-in 0.3s;
+  }
+  .hero-collection__btn:hover {
+    background-color: #ebe8f4;
+  }
+}
+@media (max-width: 767px) {
+  .products {
+    .products-banner {
+      background-image: url("@/assets/images/about-mobile.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 8vh;
+      background-position: 50% 14%;
+      background-size: 100%;
+      height: 17vh;
+      display: flex;
+      align-items: center;
+      &__title {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+        justify-content: center;
+        font-size: 36px;
+      }
+    }
+    &-wrapper {
+      justify-content: center;
+    }
+    &-cards {
+      margin: 16px;
+      max-width: 163px;
+
+      .products-items__icon {
+        max-width: 163px;
+      }
+    }
+    .hero-collection__btn {
+      padding: 16px 122px;
+    }
+  }
+}
