@@ -109,6 +109,20 @@ h2 {
   }
 }
 
+.cart-btn {
+  display: flex;
+  justify-content: end;
+  margin: 16px 62px 54px;
+  button {
+    background-color: #2a254b;
+    color: #fff;
+    transition: ease-in 0.3s;
+  }
+  button:hover {
+    background-color: #1e193e;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .cart {
     padding: 20px;
@@ -181,6 +195,13 @@ h2 {
         font-size: 20px;
         margin-right: 10px;
       }
+    }
+  }
+  .cart-btn {
+    max-width: 342px;
+    margin: 16px 0 54px;
+    button {
+      width: 100%;
     }
   }
 }

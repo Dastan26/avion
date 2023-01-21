@@ -54,11 +54,21 @@
 @media (max-width: 767px) {
   .products {
     .products-banner {
-      height: auto;
+      background-image: url("@/assets/images/about-mobile.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 8vh;
+      background-position: 50% 14%;
+      background-size: 100%;
+      height: 17vh;
+      display: flex;
+      align-items: center;
       &__title {
         padding: 20px;
         text-align: center;
         max-width: 100%;
+        justify-content: center;
+        font-size: 36px;
       }
     }
     &-wrapper {

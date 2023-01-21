@@ -47,14 +47,17 @@
 }
 @media (max-width: 767px) {
   .hero {
-    background-size: 100%;
+    background-size: 128%;
     background-position: bottom;
-    height: 58vh;
+    height: 62vh;
     &-collection {
       margin-top: 0 !important;
 
       &__text {
         margin: 47px 24px;
+      }
+      &__text p {
+        margin-bottom: 50px;
       }
       &__btn {
         margin-top: 32px !important;

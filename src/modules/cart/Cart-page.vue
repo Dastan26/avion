@@ -37,6 +37,9 @@
             <p>£{{ subtotal }}</p>
           </div>
         </div>
+        <div class="cart-btn">
+          <button>Go to checkout</button>
+        </div>
       </div>
     </div>
   </div>

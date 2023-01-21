@@ -19,10 +19,10 @@
           London interior design community.
         </p>
       </div>
-      <img src="@/assets/images/hero1.png" alt="" class="hero-first__im" />
+      <img src="@/assets/images/hero1.png" alt="" class="hero-first__img" />
     </div>
     <div class="hero-first">
-      <img src="@/assets/images/hero2.png" alt="" class="hero-first__im" />
+      <img src="@/assets/images/hero2.png" alt="" class="hero-first__img" />
       <div class="hero-block2">
         <h3 class="hero-block__title">
           Our service isn’t just personal, it’s actually hyper personally
